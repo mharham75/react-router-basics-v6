@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import '../App.css'
 
 const Navbar = () => {
+
   return (
     <nav className='nav'>
         <ul className='ul'>

@@ -7,6 +7,7 @@ import About from './components/About';
 //styles
 import './App.css';
 import Navbar from './components/Navbar';
+import OrderSummary from './components/Order-Summary';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='about' element={<About />}/>
+        <Route path='about' element={<About />} />
+        <Route path='order-summary' element={<OrderSummary />} />
       </Routes>  
     </div>
   );
