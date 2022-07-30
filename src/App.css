@@ -31,8 +31,24 @@ button{
   font-size: 20px;
 }
 
+input{
+  width: 30%;
+  border: 2px solid grey;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+input:focus{
+  border: 1px solid rgb(95, 156, 95);
+  width: 50%;
+}
+
 button:hover{
   opacity: 0.8;
+}
+
+li{
+  list-style-type: none;
 }
 
 .nav{
@@ -56,4 +72,19 @@ button:hover{
 .nav ul li:hover{
   opacity: 0.8;
   border-bottom: 1px solid gainsboro;
+}
+
+.nav-products{
+  display: flex;
+  margin: 4px 8px;
+  padding: 12px;
+  background: #ebe8e8;
+}
+
+.nav-products li {
+  padding: 10px;
+}
+
+.nav-products li:hover{
+  border-bottom: 2px solid #fff;
 }
