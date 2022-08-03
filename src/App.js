@@ -19,6 +19,7 @@ import Profile from './components/Profile'
 import './App.css';
 import { AuthProvider } from './components/auth';
 import Login from './components/Login';
+import RequireAuth from './components/RequireAuth';
 
 //Lazy Loading About
 const LazyAbout = React.lazy( () => import('./components/About'))
@@ -46,7 +47,10 @@ function App() {
           <Route path=':userid' element={<UserDetails />} />
           <Route path='admin' element={<Admin />} />
         </Route>
-        <Route path='profile' element={<Profile />}/>
+        <Route path='profile' element={
+          <RequireAuth>
+            <Profile />
+          </RequireAuth>}/>
         <Route path='login' element={<Login />}/>
         <Route path='*' element={<NoMatch />} />
       </Routes>  
