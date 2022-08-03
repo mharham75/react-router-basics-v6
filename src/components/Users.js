@@ -1,11 +1,24 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useSearchParams } from 'react-router-dom'
 
 const Users = () => {
+
+  const [searchParams,setSearchParams] = useSearchParams()
+
+  const showActiveUsers = searchParams.get('filter')==='active'
+
   return (
-    <div>Users Page
+    <>
+      <p>Users Page</p>
       <Outlet />
-    </div>
+      <button onClick={ () => setSearchParams({ filter: 'active' })}>Active Users</button>
+      <button onClick={ () => setSearchParams({ })}>Reset Filters</button>
+      <>
+        {
+          showActiveUsers ? <p>Showing Active Users</p> : <p>Showing All Users</p>
+        }
+      </>
+    </>
   )
 }
 
